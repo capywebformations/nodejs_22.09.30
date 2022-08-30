@@ -6,8 +6,8 @@ module.exports = (server) => {
         .get(postController.listAllPosts)
         .post(postController.createAPost);
 
-    // server.route('/posts/:post_id') // req.params.post_id
-    //     .get(postController.getAPost)
-    //     .put(postController.updateAPost)
-    //     .delete(postController.deleteAPost);
+    server.route('/posts/:post_id') // req.params.post_id
+        .get(postController.getAPost)
+        .put(postController.updateAPost)
+        .delete(postController.deleteAPost);
 }
