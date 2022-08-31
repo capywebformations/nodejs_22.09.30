@@ -11,10 +11,15 @@ let userSchema = new Schema({
         type: String,
         required: true
     },
+    role: {
+        type: String,
+        default: "user"
+    },
     created_at: {
         type: Date,
         default: Date.now
     }
 });
+
 
 module.exports = mongoose.model('User', userSchema);
